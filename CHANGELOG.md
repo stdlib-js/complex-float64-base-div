@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-02)
+## Unreleased (2025-06-04)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`4821a02`](https://github.com/stdlib-js/stdlib/commit/4821a020f23d86279b8a487509afb4aca176dd57) - **chore:** change examples for `complex/float64/base/div` [(#7180)](https://github.com/stdlib-js/stdlib/pull/7180) _(by Shabareesh Shetty)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
 -   [`c7c1fb3`](https://github.com/stdlib-js/stdlib/commit/c7c1fb325f010a77313c58bfd51598af47720d89) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`fba8768`](https://github.com/stdlib-js/stdlib/commit/fba87687603f2a4269c54589079c2b2e7f8da162) - **chore:** remove unused header _(by Athan Reines)_
@@ -37,11 +38,12 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gururaj Gurram
 -   Karan Anand
+-   Shabareesh Shetty
 
 </section>
 
