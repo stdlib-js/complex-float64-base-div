@@ -41,14 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/complex-float64-base-div
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@esm/index.mjs';
+var cdiv = require( '@stdlib/complex-float64-base-div' );
 ```
 
 #### cdiv( z1, z2 )
@@ -56,21 +74,13 @@ import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div
 Divides two double-precision complex floating-point numbers.
 
 ```javascript
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-real@esm/index.mjs';
-import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-imag@esm/index.mjs';
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var z1 = new Complex128( -13.0, -1.0 );
 var z2 = new Complex128( -2.0, 1.0 );
 
 var v = cdiv( z1, z2 );
-// returns <Complex128>
-
-var re = real( v );
-// returns 5.0
-
-var im = imag( v );
-// returns 3.0
+// returns <Complex128>[ 5.0, 3.0 ]
 ```
 
 </section>
@@ -83,16 +93,11 @@ var im = imag( v );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@esm/index.mjs';
+```javascript
+var Complex128Array = require( '@stdlib/array-complex128' );
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var cdiv = require( '@stdlib/complex-float64-base-div' );
 
 // Generate arrays of random values:
 var z1 = new Complex128Array( discreteUniform( 200, -50, 50 ) );
@@ -100,10 +105,6 @@ var z2 = new Complex128Array( discreteUniform( 200, -50, 50 ) );
 
 // Perform element-wise division:
 logEachMap( '(%s) / (%s) = %s', z1, z2, cdiv );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -112,7 +113,116 @@ logEachMap( '(%s) / (%s) = %s', z1, z2, cdiv );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/complex/float64/base/div.h"
+```
+
+#### stdlib_base_complex128_div( z1, z2 )
+
+Divides two double-precision complex floating-point numbers.
+
+```c
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/real.h"
+#include "stdlib/complex/float64/imag.h"
+
+stdlib_complex128_t z1 = stdlib_complex128( -13.0, -1.0 );
+stdlib_complex128_t z2 = stdlib_complex128( -2.0, 1.0 );
+
+stdlib_complex128_t out = stdlib_base_complex128_div( z1, z2 );
+
+double re = stdlib_complex128_real( out );
+// returns 5.0
+
+double im = stdlib_complex128_imag( out );
+// returns 3.0
+```
+
+The function accepts the following arguments:
+
+-   **z1**: `[in] stdlib_complex128_t` input value.
+-   **z2**: `[in] stdlib_complex128_t` input value.
+
+```c
+stdlib_complex128_t stdlib_base_complex128_div( const stdlib_complex128_t z1, const stdlib_complex128_t z2 );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/complex/float64/base/div.h"
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/reim.h"
+#include <stdio.h>
+
+int main( void ) {
+    const stdlib_complex128_t x[] = {
+        stdlib_complex128( 3.14, 1.5 ),
+        stdlib_complex128( -3.14, 1.5 ),
+        stdlib_complex128( 0.0, -0.0 ),
+        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+    };
+
+    stdlib_complex128_t v;
+    stdlib_complex128_t y;
+    double re;
+    double im;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        stdlib_complex128_reim( v, &re, &im );
+        printf( "z = %lf + %lfi\n", re, im );
+
+        y = stdlib_base_complex128_div( v, v );
+        stdlib_complex128_reim( y, &re, &im );
+        printf( "cdiv(z, z) = %lf + %lfi\n", re, im );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 * * *
 
@@ -154,7 +264,7 @@ logEachMap( '(%s) / (%s) = %s', z1, z2, cdiv );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -227,11 +337,11 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/complex/float64/base/add]: https://github.com/stdlib-js/complex-float64-base-add/tree/esm
+[@stdlib/complex/float64/base/add]: https://github.com/stdlib-js/complex-float64-base-add
 
-[@stdlib/complex/float64/base/mul]: https://github.com/stdlib-js/complex-float64-base-mul/tree/esm
+[@stdlib/complex/float64/base/mul]: https://github.com/stdlib-js/complex-float64-base-mul
 
-[@stdlib/complex/float64/base/sub]: https://github.com/stdlib-js/complex-float64-base-sub/tree/esm
+[@stdlib/complex/float64/base/sub]: https://github.com/stdlib-js/complex-float64-base-sub
 
 <!-- </related-links> -->
 
