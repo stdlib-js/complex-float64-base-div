@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-08)
+## Unreleased (2025-07-05)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`7cfd30f`](https://github.com/stdlib-js/stdlib/commit/7cfd30f9518e86adde577c3ebaacfd874e2cc651) - **test:** add appropriate values in test cases [(#7557)](https://github.com/stdlib-js/stdlib/pull/7557) _(by Shabareesh Shetty, Athan Reines)_
 -   [`6aeced9`](https://github.com/stdlib-js/stdlib/commit/6aeced9c39c38399d41e0da9a63ba3729452470b) - **docs:** update examples for `complex/float64/base/div` [(#7266)](https://github.com/stdlib-js/stdlib/pull/7266) _(by Shabareesh Shetty)_
 -   [`4821a02`](https://github.com/stdlib-js/stdlib/commit/4821a020f23d86279b8a487509afb4aca176dd57) - **chore:** change examples for `complex/float64/base/div` [(#7180)](https://github.com/stdlib-js/stdlib/pull/7180) _(by Shabareesh Shetty)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
