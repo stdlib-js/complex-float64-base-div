@@ -40,6 +40,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-float64": "^0.2.2",
     "@stdlib/complex-float64-ctor": "^0.0.3",
     "@stdlib/complex-float64-imag": "^0.1.1",
     "@stdlib/complex-float64-real": "^0.1.1",
@@ -51,11 +52,14 @@
     "@stdlib/math-base-special-abs": "^0.2.2",
     "@stdlib/math-base-special-max": "^0.3.0",
     "@stdlib/types": "^0.4.3",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
     "@stdlib/utils-library-manifest": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/array-complex128": "^0.3.0",
+    "@stdlib/assert-is-almost-equal-float64array": "github:stdlib-js/assert-is-almost-equal-float64array#main",
     "@stdlib/assert-is-complex128": "^0.2.2",
+    "@stdlib/assert-is-method": "^0.2.2",
     "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",
     "@stdlib/constants-float64-ninf": "^0.2.2",
     "@stdlib/constants-float64-pinf": "^0.2.2",
@@ -63,6 +67,7 @@
     "@stdlib/math-base-special-pow": "^0.3.0",
     "@stdlib/number-float64-base-to-binary-string": "^0.2.2",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
+    "@stdlib/random-array-uniform": "^0.2.1",
     "@stdlib/random-base-uniform": "^0.2.1",
     "@stdlib/utils-try-require": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
