@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-13)
+## Unreleased (2025-12-27)
 
 <section class="features">
 
@@ -23,6 +23,8 @@
 
 <details>
 
+-   [`312d030`](https://github.com/stdlib-js/stdlib/commit/312d03010490af92d2c0d160ef96de0331fa7f25) - **docs:** fix comment _(by Athan Reines)_
+-   [`fc438e0`](https://github.com/stdlib-js/stdlib/commit/fc438e0edbad0689d6923d6f3edb959b96597662) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
 -   [`dfbf338`](https://github.com/stdlib-js/stdlib/commit/dfbf3388bb499ec7ec5f453758acec3e6d18ee0b) - **feat:** add `assign` and `strided` methods to `complex/float64/base/div` [(#7771)](https://github.com/stdlib-js/stdlib/pull/7771) _(by Aayush Khanna, stdlib-bot)_
 -   [`7cfd30f`](https://github.com/stdlib-js/stdlib/commit/7cfd30f9518e86adde577c3ebaacfd874e2cc651) - **test:** add appropriate values in test cases [(#7557)](https://github.com/stdlib-js/stdlib/pull/7557) _(by Shabareesh Shetty, Athan Reines)_
 -   [`6aeced9`](https://github.com/stdlib-js/stdlib/commit/6aeced9c39c38399d41e0da9a63ba3729452470b) - **docs:** update examples for `complex/float64/base/div` [(#7266)](https://github.com/stdlib-js/stdlib/pull/7266) _(by Shabareesh Shetty)_
@@ -42,12 +44,13 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
 -   Athan Reines
 -   Gururaj Gurram
 -   Karan Anand
+-   Philipp Burckhardt
 -   Shabareesh Shetty
 
 </section>
