@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@deno/mod.js';
+import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@v0.1.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign, strided } from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@deno/mod.js';
+import { assign, strided } from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@v0.1.1-deno/mod.js';
 ```
 
 #### cdiv( z1, z2 )
@@ -140,7 +140,7 @@ The function supports the following parameters:
 import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@deno/mod.js';
+import cdiv from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-div@v0.1.1-deno/mod.js';
 
 // Generate arrays of random values:
 var z1 = new Complex128Array( discreteUniform( 200, -50, 50 ) );
